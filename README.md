@@ -67,10 +67,10 @@ Output of the Race Day Management Database system.
 <img width="1682" height="681" alt="image" src="https://github.com/user-attachments/assets/611739cb-79e1-44bf-a294-95b1ca5663b6" />
 
 # SET UP
-ReadMe file - Work Breakdown and Outputs
-ERD - can be accessed in the ReadMe and docs folder - ERD. png
-API - can be accessed in the ReadMe and docs folder - API_Endpoint_Plan.pdf
-SQL Script - can be accessed in the ReadMe and docs folder - RaceDayManagemnetDB_ Script.sql
+- ReadMe file - Work Breakdown and Outputs
+- ERD - can be accessed in the ReadMe and docs folder - ERD. png
+- API - can be accessed in the ReadMe and docs folder - API_Endpoint_Plan.pdf
+- SQL Script - can be accessed in the ReadMe and docs folder - RaceDayManagemnetDB_ Script.sql
 
 # GitHub Actions CI/CD Workflow
 <img width="1392" height="286" alt="image" src="https://github.com/user-attachments/assets/d6b5db8c-ac52-484c-97d9-8f89660f508f" />
