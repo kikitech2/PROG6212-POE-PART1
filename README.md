@@ -77,6 +77,8 @@ Output of the Race Day Management Database system.
 ![CI/CD Build Success](./cicd-build.png)
 
 # YouTube Link
+https://youtu.be/cNDCuXv7iDU
+
 
 # References
 Troelsen, A. and Japikse, P. (2021). Pro C# 9 with .NET 5: Foundational Principles and Practices in Programming. 10th edn. New York: Apress.
