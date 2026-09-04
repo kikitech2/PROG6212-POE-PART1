@@ -64,6 +64,7 @@ Section B is in a table formatted in word docs that covers all the functionaliti
 # Section C
 Output of the Race Day Management Database system.
 <img width="846" height="446" alt="image" src="https://github.com/user-attachments/assets/adc0bafa-0639-4243-8a20-3581c42ee4fa" />
+<img width="1682" height="681" alt="image" src="https://github.com/user-attachments/assets/611739cb-79e1-44bf-a294-95b1ca5663b6" />
 
-
+Race Day Management SQL Script is in the RaceDayManagementDB file. 
 
