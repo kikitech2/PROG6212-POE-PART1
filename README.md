@@ -46,7 +46,7 @@ Section B is in a table formatted in word docs that covers all the functionaliti
 <img width="847" height="272" alt="image" src="https://github.com/user-attachments/assets/33e6e3b9-935a-4e92-bc2c-faf0f662e4cb" />
 
 4. Category (/api/categories)
-   <img width="866" height="292" alt="image" src="https://github.com/user-attachments/assets/b89a29fc-2d40-4cb0-88c9-3b1c04ca409c" />
+<img width="866" height="292" alt="image" src="https://github.com/user-attachments/assets/b89a29fc-2d40-4cb0-88c9-3b1c04ca409c" />
 <img width="855" height="327" alt="image" src="https://github.com/user-attachments/assets/fa4d90cb-feff-4691-bc9d-a72a330fae2b" />
 
 5. Enrolment (/api/enrolments)
