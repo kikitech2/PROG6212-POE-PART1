@@ -61,5 +61,9 @@ Section B is in a table formatted in word docs that covers all the functionaliti
 <img width="865" height="217" alt="image" src="https://github.com/user-attachments/assets/74e19ce2-f9a3-458c-b87d-88a51bdee95f" />
 <img width="850" height="120" alt="image" src="https://github.com/user-attachments/assets/34d34176-d131-493a-af37-6ebf94b51856" />
 
+# Section C
+Output of the Race Day Management Database system.
+<img width="846" height="446" alt="image" src="https://github.com/user-attachments/assets/adc0bafa-0639-4243-8a20-3581c42ee4fa" />
+
 
 
