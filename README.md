@@ -30,3 +30,7 @@ Results records all the finish times, overall positions and status of each event
 
 <img width="1610" height="737" alt="image" src="https://github.com/user-attachments/assets/14ddf4cf-f79c-4892-9728-2fc3947b58b3" />
 
+# Section B
+
+
+
