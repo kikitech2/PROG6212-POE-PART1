@@ -32,5 +32,14 @@ Results records all the finish times, overall positions and status of each event
 
 # Section B
 
+Section B is in a table formatted in word docs that covers all the functionalities across 6 entities.
 
+1. Authentication Endpoints for account registration and login (/api/auth/)
+  
+3. User Profile (/api/users) - 
+4. Event (/api/events)
+5. Category (/api/categories)
+6. Enrolment (/api/enrolments)
+7. Result (/api/results)
+8. Route Information ( /api/routes/)
 
