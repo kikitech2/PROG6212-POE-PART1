@@ -35,11 +35,31 @@ Results records all the finish times, overall positions and status of each event
 Section B is in a table formatted in word docs that covers all the functionalities across 6 entities.
 
 1. Authentication Endpoints for account registration and login (/api/auth/)
-  
-3. User Profile (/api/users) - 
-4. Event (/api/events)
-5. Category (/api/categories)
-6. Enrolment (/api/enrolments)
-7. Result (/api/results)
-8. Route Information ( /api/routes/)
+  <img width="885" height="302" alt="image" src="https://github.com/user-attachments/assets/add3750d-050c-4fb1-bd67-abf8e2e5c0c2" />
+
+2. User Profile (/api/users)
+<img width="866" height="222" alt="image" src="https://github.com/user-attachments/assets/a607c40a-8199-4d85-b24f-3bc60a2cc3a3" />
+<img width="871" height="137" alt="image" src="https://github.com/user-attachments/assets/3d3c2414-30a7-4944-9b48-995943bc5811" />
+
+3. Event (/api/events)
+<img width="861" height="447" alt="image" src="https://github.com/user-attachments/assets/4a252c3d-0dfb-40a8-b483-bcae66467e33" />
+<img width="847" height="272" alt="image" src="https://github.com/user-attachments/assets/33e6e3b9-935a-4e92-bc2c-faf0f662e4cb" />
+
+4. Category (/api/categories)
+   <img width="866" height="292" alt="image" src="https://github.com/user-attachments/assets/b89a29fc-2d40-4cb0-88c9-3b1c04ca409c" />
+<img width="855" height="327" alt="image" src="https://github.com/user-attachments/assets/fa4d90cb-feff-4691-bc9d-a72a330fae2b" />
+
+5. Enrolment (/api/enrolments)
+<img width="847" height="237" alt="image" src="https://github.com/user-attachments/assets/b12e8f70-ca00-4382-963b-40de9fa1b977" />
+<img width="862" height="427" alt="image" src="https://github.com/user-attachments/assets/fe8ae020-d595-41b8-ae35-ec5e77db6f27" />
+
+6. Result (/api/results)
+<img width="882" height="185" alt="image" src="https://github.com/user-attachments/assets/8c08464e-6d67-4280-942f-83b3af95da15" />
+<img width="847" height="342" alt="image" src="https://github.com/user-attachments/assets/6f8ac3fd-aec4-487a-9a88-ee159effd003" />
+
+7. Route Information ( /api/routes/)
+<img width="865" height="217" alt="image" src="https://github.com/user-attachments/assets/74e19ce2-f9a3-458c-b87d-88a51bdee95f" />
+<img width="850" height="120" alt="image" src="https://github.com/user-attachments/assets/34d34176-d131-493a-af37-6ebf94b51856" />
+
+
 
