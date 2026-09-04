@@ -66,7 +66,10 @@ Output of the Race Day Management Database system.
 <img width="846" height="446" alt="image" src="https://github.com/user-attachments/assets/adc0bafa-0639-4243-8a20-3581c42ee4fa" />
 <img width="1682" height="681" alt="image" src="https://github.com/user-attachments/assets/611739cb-79e1-44bf-a294-95b1ca5663b6" />
 
-Race Day Management SQL Script is in the RaceDayManagementDB file. 
+# SET UP
+Race Day Management SQL Script is in the RaceDayManagementDB file and docs folder. 
+ERD photo can be seen in the Readme and docs foler.
+API endpoints can be seen in the Readme and docs folder.
 
 # GitHub Actions CI/CD Workflow
 <img width="1392" height="286" alt="image" src="https://github.com/user-attachments/assets/d6b5db8c-ac52-484c-97d9-8f89660f508f" />
