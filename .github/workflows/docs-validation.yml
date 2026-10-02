@@ -9,18 +9,19 @@ on:
 jobs:
   validate-docs:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Verify /docs Folder and Required Files
+      - name: Verify Part 1 Folder and Required Files
         run: |
-          echo "Checking for /docs directory..."
-          test -d docs || { echo "::error::Directory /docs does not exist"; exit 1; }
-          
+          echo "Checking for Part 1 directory..."
+          test -d "Part 1" || { echo "::error::Directory Part 1 does not exist"; exit 1; }
+
           echo "Checking required documentation files..."
-          ls docs/ | grep -iE 'erd' || { echo "::error::ERD file missing in /docs"; exit 1; }
-          ls docs/ | grep -iE 'api|endpoint' || { echo "::error::API plan file missing in /docs"; exit 1; }
-          ls docs/ | grep -iE '\.sql$' || { echo "::error::SQL script file missing in /docs"; exit 1; }
-          
+          ls "Part 1/" | grep -i 'erd' || { echo "::error::ERD file missing in Part 1"; exit 1; }
+          ls "Part 1/" | grep -i 'api.*endpoint' || { echo "::error::API endpoint file missing in Part 1"; exit 1; }
+          ls "Part 1/" | grep -i '\.sql$' || { echo "::error::SQL script file missing in Part 1"; exit 1; }
+
           echo "All required documentation files are present!"
