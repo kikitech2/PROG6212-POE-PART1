@@ -1,0 +1,243 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RaceDayManagementAPI</name>
+    </assembly>
+    <members>
+        <member name="M:RaceDayManagementAPI.Controllers.AuthController.Register(RaceDayManagementAPI.Controllers.RegisterDto)">
+            <summary>
+            Registers a new user with an Organiser or Participant role and hashes their password.
+            </summary>
+            <param name="dto">The registration details including name, email, password, and role.</param>
+            <returns>A confirmation message and the newly generated user ID.</returns>
+            <response code="200">User registered successfully.</response>
+            <response code="400">If a user with the provided email already exists.</response>
+        </member>
+        <member name="M:RaceDayManagementAPI.Controllers.AuthController.Login(RaceDayManagementAPI.Controllers.LoginDto)">
+            <summary>
+            Authenticates a user using email and password.
+            </summary>
+            <param name="dto">The login credentials.</param>
+            <returns>User profile details including user ID, name, email, and assigned role.</returns>
+            <response code="200">Login successful.</response>
+            <response code="401">If the email or password is invalid.</response>
+        </member>
+        <member name="M:RaceDayManagementAPI.Controllers.EnrolmentsController.GetEnrolments">
+            <summary>
+            Retrieves all the event enrolments in the system.
+            </summary>
+            <returns>A list of all enrolments with participant, event, and category details.</returns>
+            <response code="200">Returns the list of enrolments successfully.</response>
+        </member>
+        <member name="M:RaceDayManagementAPI.Controllers.EnrolmentsController.PostEnrolment(RaceDayManagementAPI.Models.Enrolment)">
+            <summary>
+            Registers a user for a race event under a specific category.
+            </summary>
+            <param name="enrolment">The enrolment details to create.</param>
+            <returns>The newly created enrolment record.</returns>
+            <response code="201">Enrolment created successfully.</response>
+            <response code="400">If the enrolment payload is invalid.</response>
+        </member>
+        <member name="M:RaceDayManagementAPI.Controllers.EnrolmentsController.DeleteEnrolment(System.Int32)">
+            <summary>
+            Cancels a participant's event enrolment by its ID.
+            </summary>
+            <param name="id">The unique ID of the enrolment to delete.</param>
+            <returns>No content on success.</returns>
+            <response code="204">Enrolment deleted successfully.</response>
+            <response code="404">If the enrolment was not found.</response>
+        </member>
+        <member name="M:RaceDayManagementAPI.Controllers.EventCategoriesController.GetEventCategories">
+            <summary>
+            Retrieves all event categories (e.g., Under 20, Senior, 10km, 21km).
+            </summary>
+            <returns>A list of all available event categories.</returns>
+            <response code="200">Returns the list of categories successfully.</response>
+        </member>
+        <member name="M:RaceDayManagementAPI.Controllers.EventCategoriesController.GetEventCategory(System.Int32)">
+            <summary>
+            Retrieves details for a specific event category by its ID.
+            </summary>
+            <param name="id">The unique ID of the event category.</param>
+            <returns>The requested event category object.</returns>
+            <response code="200">Returns the category details.</response>
+            <response code="404">If the category with the given ID was not found.</response>
+        </member>
+        <member name="M:RaceDayManagementAPI.Controllers.EventCategoriesController.CreateEventCategory(RaceDayManagementAPI.Models.EventCategory)">
+            <summary>
+            Creates a new event category in the system.
+            </summary>
+            <param name="category">The details of the event category to create.</param>
+            <returns>The newly created event category.</returns>
+            <response code="201">Event category created successfully.</response>
+            <response code="400">If the request payload is invalid.</response>
+        </member>
+        <member name="M:RaceDayManagementAPI.Controllers.EventCategoriesController.UpdateEventCategory(System.Int32,RaceDayManagementAPI.Models.EventCategory)">
+            <summary>
+            Updates an existing event category by its ID.
+            </summary>
+            <param name="id">The unique ID of the event category to update.</param>
+            <param name="category">The updated event category details.</param>
+            <returns>No content on success.</returns>
+            <response code="204">Event category updated successfully.</response>
+            <response code="400">If the URL ID does not match the category payload ID.</response>
+            <response code="404">If the category does not exist.</response>
+        </member>
+        <member name="M:RaceDayManagementAPI.Controllers.EventCategoriesController.DeleteEventCategory(System.Int32)">
+            <summary>
+            Deletes a specific event category by its ID.
+            </summary>
+            <param name="id">The unique ID of the event category to delete.</param>
+            <returns>No content on success.</returns>
+            <response code="204">Event category deleted successfully.</response>
+            <response code="404">If the event category was not found.</response>
+        </member>
+        <member name="M:RaceDayManagementAPI.Controllers.EventsController.GetEvents">
+            <summary>
+            Retrieves all race events along with their assigned categories.
+            </summary>
+            <returns> A list of all scheduled events.</returns>
+            <response code = "200"> Returns the list of events successfully.</response>
+        </member>
+        <member name="M:RaceDayManagementAPI.Controllers.EventsController.GetEvent(System.Int32)">
+            <summary>
+            Retrieves details for a specific race event by its ID.
+            </summary>
+            <param name="id"> The unique ID of the event.</param>
+            <returns> The requested event object.</returns>
+            <response code = "200"> Returns the event details.</response>
+            <response code = "404"> If the event with the given ID was not found.</response>
+        </member>
+        <member name="M:RaceDayManagementAPI.Controllers.EventsController.CreateEvent(RaceDayManagementAPI.Models.Event)">
+            <summary>
+            Creates a new race event in the system.
+            </summary>
+            <param name="event"> The event details to create.</param>
+            <returns> The newly created event.</returns>
+            <response code = "201" > Event created successfully.</response>
+            <response code = "400" > If the request payload is invalid.</response>
+        </member>
+        <member name="M:RaceDayManagementAPI.Controllers.EventsController.UpdateEvent(System.Int32,RaceDayManagementAPI.Models.Event)">
+            <summary>
+            Updates an existing race event by its ID.
+            </summary>
+            <param name="id"> The unique ID of the event to update.</param>
+            <param name="event"> The updated event details.</param>
+            <returns> No content on success.</returns>
+            <response code = "204" > Event updated successfully.</response>
+            <response code = "400" > If the URL ID does not match the event body ID.</response>
+            <response code = "404" > If the event does not exist.</response>
+        </member>
+        <member name="M:RaceDayManagementAPI.Controllers.EventsController.DeleteEvent(System.Int32)">
+            <summary>
+            Deletes a specific race event by its ID.
+            </summary>
+            <param name="id"> The unique ID of the event to delete.</param>
+            <returns> No content on success.</returns>
+            <response code = "204" > Event deleted successfully.</response>
+            <response code = "404" > If the event was not found.</response>
+        </member>
+        <member name="M:RaceDayManagementAPI.Controllers.ResultsController.GetResults">
+            <summary>
+            Retrieves all race finish results with participant and event details.
+            </summary>
+            <returns>A list of all recorded race results.</returns>
+            <response code="200">Returns the list of results successfully.</response>
+        </member>
+        <member name="M:RaceDayManagementAPI.Controllers.ResultsController.GetResult(System.Int32)">
+            <summary>
+            Retrieves details for a specific race result by its ID.
+            </summary>
+            <param name="id">The unique ID of the race result.</param>
+            <returns>The requested result object.</returns>
+            <response code="200">Returns the result details.</response>
+            <response code="404">If the result was not found.</response>
+        </member>
+        <member name="M:RaceDayManagementAPI.Controllers.ResultsController.PostResult(RaceDayManagementAPI.Models.Result)">
+            <summary>
+            Records a participant's finish time and position for an event.
+            </summary>
+            <param name="result">The result payload to capture.</param>
+            <returns>The newly recorded result record.</returns>
+            <response code="201">Result captured successfully.</response>
+            <response code="400">If the result payload is invalid.</response>
+        </member>
+        <member name="M:RaceDayManagementAPI.Controllers.ResultsController.PutResult(System.Int32,RaceDayManagementAPI.Models.Result)">
+            <summary>
+            Updates an existing race result by its ID.
+            </summary>
+            <param name="id">The unique ID of the result to update.</param>
+            <param name="result">The updated result details.</param>
+            <returns>No content on success.</returns>
+            <response code="204">Result updated successfully.</response>
+            <response code="400">If the URL ID does not match the payload ID.</response>
+            <response code="404">If the result does not exist.</response>
+        </member>
+        <member name="M:RaceDayManagementAPI.Controllers.ResultsController.DeleteResult(System.Int32)">
+            <summary>
+            Deletes a specific race result by its ID.
+            </summary>
+            <param name="id">The unique ID of the result to delete.</param>
+            <returns>No content on success.</returns>
+            <response code="204">Result deleted successfully.</response>
+            <response code="404">If the result was not found.</response>
+        </member>
+        <member name="M:RaceDayManagementAPI.Controllers.RoutesController.GetRoutes">
+            <summary>
+            Retrieves all race routes available in the system.
+            </summary>
+            <returns>A list of all routes.</returns>
+            <response code="200">Returns the list of routes successfully.</response>
+        </member>
+        <member name="M:RaceDayManagementAPI.Controllers.RoutesController.GetRoute(System.Int32)">
+            <summary>
+            Retrieves details for a specific route by its ID.
+            </summary>
+            <param name="id">The unique ID of the route.</param>
+            <returns>The requested route object.</returns>
+            <response code="200">Returns the route details.</response>
+            <response code="404">If the route with the given ID was not found.</response>
+        </member>
+        <member name="M:RaceDayManagementAPI.Controllers.RoutesController.CreateRoute(RaceDayManagementAPI.Models.RouteInfo)">
+            <summary>
+            Creates a new race route in the system.
+            </summary>
+            <param name="route">The route details to create.</param>
+            <returns>The newly created route.</returns>
+            <response code="201">Route created successfully.</response>
+            <response code="400">If the request payload is invalid.</response>
+        </member>
+        <member name="M:RaceDayManagementAPI.Controllers.RoutesController.UpdateRoute(System.Int32,RaceDayManagementAPI.Models.RouteInfo)">
+            <summary>
+            Updates an existing route by its ID.
+            </summary>
+            <param name="id">The unique ID of the route to update.</param>
+            <param name="route">The updated route details.</param>
+            <returns>No content on success.</returns>
+            <response code="204">Route updated successfully.</response>
+            <response code="400">If the URL ID does not match the route payload ID.</response>
+            <response code="404">If the route does not exist.</response>
+        </member>
+        <member name="M:RaceDayManagementAPI.Controllers.RoutesController.DeleteRoute(System.Int32)">
+            <summary>
+            Deletes a specific route by its ID.
+            </summary>
+            <param name="id">The unique ID of the route to delete.</param>
+            <returns>No content on success.</returns>
+            <response code="204">Route deleted successfully.</response>
+            <response code="404">If the route was not found.</response>
+        </member>
+        <member name="T:RaceDayManagementAPI.Migrations.InitialCreate">
+            <inheritdoc />
+        </member>
+        <member name="M:RaceDayManagementAPI.Migrations.InitialCreate.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:RaceDayManagementAPI.Migrations.InitialCreate.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:RaceDayManagementAPI.Migrations.InitialCreate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>
