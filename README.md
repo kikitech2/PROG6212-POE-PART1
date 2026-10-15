@@ -1,4 +1,8 @@
-# PROG6212-POE-PART1
+# Repository:PROG6212-POE-PART2
+# Race Day Management
+- Student ID: ST10464927
+- Name: Kirsten Smith
+- Module: PROG6212-Programming 2B
 # Planning
 Part 1 of the POE consists of 3 Parts:
 
