@@ -19,6 +19,7 @@ Part 2 of the POE consists of 6 Requirements:
 5. Unit Testing
 6. GitHub and CI/CD
 
+# Part 1
 # Section A
 In this POE PART 1 - I have created my ERD in Microsoft Visio.
 The ERD occupies 6 entities with their functional requirements.
