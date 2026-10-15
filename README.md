@@ -19,7 +19,13 @@ Part 2 of the POE consists of 6 Requirements:
 5. Unit Testing
 6. GitHub and CI/CD
 
-# Part 1
+
+# Part 1 SET UP
+- ReadMe file - Work Breakdown and Outputs
+- ERD - can be accessed in the ReadMe and docs folder - ERD. png
+- API - can be accessed in the ReadMe and docs folder - API_Endpoint_Plan.pdf
+- SQL Script - can be accessed in the ReadMe and docs folder - RaceDayManagemnetDB_ Script.sql
+  
 # Section A
 In this POE PART 1 - I have created my ERD in Microsoft Visio.
 The ERD occupies 6 entities with their functional requirements.
@@ -80,15 +86,44 @@ Output of the Race Day Management Database system.
 <img width="846" height="446" alt="image" src="https://github.com/user-attachments/assets/adc0bafa-0639-4243-8a20-3581c42ee4fa" />
 <img width="1682" height="681" alt="image" src="https://github.com/user-attachments/assets/611739cb-79e1-44bf-a294-95b1ca5663b6" />
 
-# SET UP
-- ReadMe file - Work Breakdown and Outputs
-- ERD - can be accessed in the ReadMe and docs folder - ERD. png
-- API - can be accessed in the ReadMe and docs folder - API_Endpoint_Plan.pdf
-- SQL Script - can be accessed in the ReadMe and docs folder - RaceDayManagemnetDB_ Script.sql
+# Part 2 
+# Project Overview
+The Race Day Management API is a Restful web API built using C# and .NET 8.0. It provides a centralized service for managing race day events, participants, and results. The project adheres to clean architecture principles, featuring full unit test coverage and automated Continuous Integration (CI/CD) through GitHub Actions.
 
-# GitHub Actions CI/CD Workflow
+# SET UP & Tools
+- ReadMe file - Work Breakdown and Outputs
+- Part 2 Folder
+1. RaceDayMangementAPI.sln
+2. RaceDayManagementAPI
+3. RaceDayManagementAPI.Tests
+- Framework: .NET 8.0 (ASP.NET Core Web API)
+- IDE: Microsoft Visual Studio 2022
+- Unit Testing: xUnit/NUnit & Moq
+- CI/CD: Github Actions
+- Versions Control: Git & GitHub
+
+# Running via Visual Studio
+- Navigate to Part 2 folder and open RaceDayManagementAPI.sln in Visual Studio 2022.
+- Press F5 or click Start Debugging to launch API.
+- Access the Interactive Swagger UI in your browser.
+
+# Running Unit Tests Locally
+- In Visual Studio, open Test > Test Explorer
+- Click Run All Test.
+
+# API Endpoint Documentation
+<img width="605" height="366" alt="image" src="https://github.com/user-attachments/assets/65652770-b5c8-475f-a43d-d8861c932fad" />
+
+
+
+
+# GitHub Actions CI/CD Workflow & Continuous Integration Setup
+# PART 1
 <img width="1392" height="286" alt="image" src="https://github.com/user-attachments/assets/d6b5db8c-ac52-484c-97d9-8f89660f508f" />
 ![CI/CD Build Success](./cicd-build.png)
+
+# PART 2
+
 
 # YouTube Link
 https://youtu.be/cNDCuXv7iDU
