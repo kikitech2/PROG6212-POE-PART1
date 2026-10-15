@@ -123,6 +123,7 @@ The Race Day Management API is a Restful web API built using C# and .NET 8.0. It
 ![CI/CD Build Success](./cicd-build.png)
 
 # PART 2
+<img width="725" height="166" alt="image" src="https://github.com/user-attachments/assets/707eac65-03d1-4612-8128-6448779e5b50" />
 
 
 # YouTube Link
