@@ -22,9 +22,10 @@ Part 2 of the POE consists of 6 Requirements:
 
 # Part 1 SET UP
 - ReadMe file - Work Breakdown and Outputs
-- ERD - can be accessed in the ReadMe and docs folder - ERD. png
-- API - can be accessed in the ReadMe and docs folder - API_Endpoint_Plan.pdf
-- SQL Script - can be accessed in the ReadMe and docs folder - RaceDayManagemnetDB_ Script.sql
+- Part 1 Folder:
+1. ERD - can be accessed in the ReadMe and docs folder - ERD. png
+2. API - can be accessed in the ReadMe and docs folder - API_Endpoint_Plan.pdf
+3. SQL Script - can be accessed in the ReadMe and docs folder - RaceDayManagemnetDB_ Script.sql
   
 # Section A
 In this POE PART 1 - I have created my ERD in Microsoft Visio.
