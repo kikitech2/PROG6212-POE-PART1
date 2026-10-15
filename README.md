@@ -112,9 +112,7 @@ The Race Day Management API is a Restful web API built using C# and .NET 8.0. It
 - Click Run All Test.
 
 # API Endpoint Documentation
-<img width="605" height="366" alt="image" src="https://github.com/user-attachments/assets/65652770-b5c8-475f-a43d-d8861c932fad" />
-
-
+<img width="1178" height="138" alt="image" src="https://github.com/user-attachments/assets/0a7b72b0-d6e2-4904-82dc-9b49efcb1019" />
 
 
 # GitHub Actions CI/CD Workflow & Continuous Integration Setup
