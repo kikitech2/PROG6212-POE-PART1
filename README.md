@@ -3,12 +3,21 @@
 - Student ID: ST10464927
 - Name: Kirsten Smith
 - Module: PROG6212-Programming 2B
+  
 # Planning
 Part 1 of the POE consists of 3 Parts:
 
 - Section A - ERD
 - Section B - API Endpoint Plan
 - Section C - SQL Database Script
+
+Part 2 of the POE consists of 6 Requirements:
+1. Project Setup
+2. Authentication and Role-Based Access
+3. Functional Requirements
+4. Swagger Integration
+5. Unit Testing
+6. GitHub and CI/CD
 
 # Section A
 In this POE PART 1 - I have created my ERD in Microsoft Visio.
