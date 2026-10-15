@@ -112,6 +112,12 @@ The Race Day Management API is a Restful web API built using C# and .NET 8.0. It
 - In Visual Studio, open Test > Test Explorer
 - Click Run All Test.
 
+# Screenshot of all unit tests passed
+<img width="822" height="401" alt="image" src="https://github.com/user-attachments/assets/8e64d5b5-45f3-448d-8643-e4e1fdf66387" />
+
+# Swagger UI
+
+
 # API Endpoint Documentation
 <img width="606" height="374" alt="image" src="https://github.com/user-attachments/assets/05e24206-2e67-47da-b4b7-8664a29b0262" />
 
