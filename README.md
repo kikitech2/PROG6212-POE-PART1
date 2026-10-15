@@ -1,5 +1,5 @@
-# Repository:PROG6212-POE-PART2
-# Race Day Management
+# Repository: PROG6212-POE-PART2
+# Race Day Management API
 - Student ID: ST10464927
 - Name: Kirsten Smith
 - Module: PROG6212-Programming 2B
