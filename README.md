@@ -1,10 +1,10 @@
 # Repository: PROG6212-POE-PART2
-# Race Day Management API
+# Race Day Management API System
 - Student ID: ST10464927
 - Name: Kirsten Smith
 - Module: PROG6212-Programming 2B
   
-# Planning
+# Planning & Overview
 Part 1 of the POE consists of 3 Parts:
 
 - Section A - ERD
@@ -18,6 +18,16 @@ Part 2 of the POE consists of 6 Requirements:
 4. Swagger Integration
 5. Unit Testing
 6. GitHub and CI/CD
+
+Part 3 of the POE consists of 8 requirements
+1. MVC Application Setup
+2. Authentication and Role-Based Navigation
+3. Organizer Interface
+4. Participant Interface
+5. Azure Blob Storage
+6. Docker
+7. UI Design
+8. GitHub and CI/CD
 
 
 # Part 1 SET UP
