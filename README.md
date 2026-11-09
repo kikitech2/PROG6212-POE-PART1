@@ -1,4 +1,9 @@
-# PROG6212-POE-PART1
+# Repository: PROG6212-POE-PART2
+# Race Day Management API
+- Student ID: ST10464927
+- Name: Kirsten Smith
+- Module: PROG6212-Programming 2B
+  
 # Planning
 Part 1 of the POE consists of 3 Parts:
 
@@ -6,6 +11,22 @@ Part 1 of the POE consists of 3 Parts:
 - Section B - API Endpoint Plan
 - Section C - SQL Database Script
 
+Part 2 of the POE consists of 6 Requirements:
+1. Project Setup
+2. Authentication and Role-Based Access
+3. Functional Requirements
+4. Swagger Integration
+5. Unit Testing
+6. GitHub and CI/CD
+
+
+# Part 1 SET UP
+- ReadMe file - Work Breakdown and Outputs
+- Part 1 Folder:
+1. ERD - can be accessed in the ReadMe and docs folder - ERD. png
+2. API - can be accessed in the ReadMe and docs folder - API_Endpoint_Plan.pdf
+3. SQL Script - can be accessed in the ReadMe and docs folder - RaceDayManagemnetDB_ Script.sql
+  
 # Section A
 In this POE PART 1 - I have created my ERD in Microsoft Visio.
 The ERD occupies 6 entities with their functional requirements.
@@ -66,19 +87,58 @@ Output of the Race Day Management Database system.
 <img width="846" height="446" alt="image" src="https://github.com/user-attachments/assets/adc0bafa-0639-4243-8a20-3581c42ee4fa" />
 <img width="1682" height="681" alt="image" src="https://github.com/user-attachments/assets/611739cb-79e1-44bf-a294-95b1ca5663b6" />
 
-# SET UP
-- ReadMe file - Work Breakdown and Outputs
-- ERD - can be accessed in the ReadMe and docs folder - ERD. png
-- API - can be accessed in the ReadMe and docs folder - API_Endpoint_Plan.pdf
-- SQL Script - can be accessed in the ReadMe and docs folder - RaceDayManagemnetDB_ Script.sql
+# Part 2 
+# Project Overview
+The Race Day Management API is a Restful web API built using C# and .NET 8.0. It provides a centralized service for managing race day events, participants, and results. The project adheres to clean architecture principles, featuring full unit test coverage and automated Continuous Integration (CI/CD) through GitHub Actions.
 
-# GitHub Actions CI/CD Workflow
+# SET UP & Tools
+- ReadMe file - Work Breakdown and Outputs
+- Part 2 Folder
+1. RaceDayMangementAPI.sln
+2. RaceDayManagementAPI
+3. RaceDayManagementAPI.Tests
+- Framework: .NET 8.0 (ASP.NET Core Web API)
+- IDE: Microsoft Visual Studio 2022
+- Unit Testing: xUnit/NUnit & Moq
+- CI/CD: Github Actions
+- Versions Control: Git & GitHub
+
+# Running via Visual Studio
+- Navigate to Part 2 folder and open RaceDayManagementAPI.sln in Visual Studio 2022.
+- Press F5 or click Start Debugging to launch API.
+- Access the Interactive Swagger UI in your browser.
+
+# Running Unit Tests Locally
+- In Visual Studio, open Test > Test Explorer
+- Click Run All Test.
+
+# Screenshot of all unit tests passed
+<img width="822" height="401" alt="image" src="https://github.com/user-attachments/assets/8e64d5b5-45f3-448d-8643-e4e1fdf66387" />
+
+# Swagger UI
+<img width="1888" height="767" alt="image" src="https://github.com/user-attachments/assets/aa45a028-9efe-4e9c-bc23-daf4ceabac3b" />
+<img width="1867" height="823" alt="image" src="https://github.com/user-attachments/assets/49c53488-3e8f-4f02-986c-f96a4a667cfa" />
+<img width="1886" height="863" alt="image" src="https://github.com/user-attachments/assets/c4eacdb2-0bde-43e5-a492-b80c81c58fd9" />
+<img width="1862" height="896" alt="image" src="https://github.com/user-attachments/assets/298e0092-2fca-4b06-ae6f-c7e6d7968f6f" />
+
+
+# API Endpoint Documentation
+<img width="606" height="374" alt="image" src="https://github.com/user-attachments/assets/05e24206-2e67-47da-b4b7-8664a29b0262" />
+
+
+
+# GitHub Actions CI/CD Workflow & Continuous Integration Setup
+# PART 1
 <img width="1392" height="286" alt="image" src="https://github.com/user-attachments/assets/d6b5db8c-ac52-484c-97d9-8f89660f508f" />
 ![CI/CD Build Success](./cicd-build.png)
 
-# YouTube Link
-https://youtu.be/cNDCuXv7iDU
+# PART 2
+<img width="1178" height="138" alt="image" src="https://github.com/user-attachments/assets/45348f23-9caf-4f0c-9028-e7ca824970da" />
 
+
+# YouTube Link
+- Part 1: https://youtu.be/cNDCuXv7iDU
+- Part 2: https://youtu.be/-AbNhpH1okY
 
 # References
 Troelsen, A. and Japikse, P. (2021). Pro C# 9 with .NET 5: Foundational Principles and Practices in Programming. 10th edn. New York: Apress.
