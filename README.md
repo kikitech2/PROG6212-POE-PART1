@@ -135,6 +135,17 @@ The Race Day Management API is a Restful web API built using C# and .NET 8.0. It
 # API Endpoint Documentation
 <img width="606" height="374" alt="image" src="https://github.com/user-attachments/assets/05e24206-2e67-47da-b4b7-8664a29b0262" />
 
+# Part 3
+# Project Overview:
+Building the web front end for the RaceDayManagement platform and bringing all components together into a polished, production-ready application that consumes the API built in Part 2 and provides a clean interface for both the Organizers and Participants. The application is containerized using Docker.
+
+# SET UP & Tools
+- ReadMe file - Work Breakdown and Outputs
+- Part 3 Folder
+- RaceDayManagement.Web (ASP.NET Core MVC Frontend)
+- RaceDayManagementAPI (Backend Web API)
+- RaceDayManagementAPI.Tests (Unit Tests)
+- Dockerfile & docker-compose.yml (Container configuration)
 
 
 # GitHub Actions CI/CD Workflow & Continuous Integration Setup
