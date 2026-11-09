@@ -142,12 +142,33 @@ Building the web front end for the RaceDayManagement platform and bringing all c
 # SET UP & Tools
 - ReadMe file - Work Breakdown and Outputs
 - Part 3 Folder
-- RaceDayManagement.Web (ASP.NET Core MVC Frontend)
-- RaceDayManagementAPI (Backend Web API)
-- RaceDayManagementAPI.Tests (Unit Tests)
-- Dockerfile & docker-compose.yml (Container configuration)
+1. RaceDayManagement.Web (ASP.NET Core MVC Frontend)
+2. RaceDayManagementAPI (Backend Web API)
+3. RaceDayManagementAPI.Tests (Unit Tests)
+4. Dockerfile & docker-compose.yml (Container configuration)
 
+# Running via Visual Studio
+- Navigate to Part 3 folder and open RaceDayManagementAPI.sln in Visual Studio 2022.
+- Press F5 or click Start Debugging to launch API.
 
+# Azure Blob Storage Integration
+Part 3 integrates Azure Blob Storage (via Azurite local storage emulation during development) to securely upload, manage, and retrieve event documents, images, and GPX route files.
+
+# Running with Docker Instructions
+To containerize and run the application locally using Docker:
+
+1. **Prerequisites:** Ensure [Docker Desktop](https://www.docker.com/) is installed and running on your machine.
+2. **Build and Run via Docker Compose:**
+   Open your terminal in the repository root directory (where `docker-compose.yml` is located) and execute:
+   ```bash
+   docker-compose build
+   docker-compose up  
+
+# Access the Application
+- Web Frontend
+- API Swagger UI
+
+  
 # GitHub Actions CI/CD Workflow & Continuous Integration Setup
 # PART 1
 <img width="1392" height="286" alt="image" src="https://github.com/user-attachments/assets/d6b5db8c-ac52-484c-97d9-8f89660f508f" />
@@ -156,10 +177,12 @@ Building the web front end for the RaceDayManagement platform and bringing all c
 # PART 2
 <img width="1178" height="138" alt="image" src="https://github.com/user-attachments/assets/45348f23-9caf-4f0c-9028-e7ca824970da" />
 
+# PART 3
 
 # YouTube Link
 - Part 1: https://youtu.be/cNDCuXv7iDU
 - Part 2: https://youtu.be/-AbNhpH1okY
+- Part 3:
 
 # References
 Troelsen, A. and Japikse, P. (2021). Pro C# 9 with .NET 5: Foundational Principles and Practices in Programming. 10th edn. New York: Apress.
