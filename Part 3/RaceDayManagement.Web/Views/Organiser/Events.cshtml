@@ -1,0 +1,67 @@
+﻿@model IEnumerable<RaceDayManagement.Web.Models.EventViewModel>
+
+@{
+    ViewData["Title"] = "Manage Events";
+}
+
+<div class="container mt-4">
+    <div class="row mb-4">
+        <div class="col-md-8">
+            <h2>Manage Events</h2>
+            <p class="text-muted">Review, update, or remove active race events in the system.</p>
+        </div>
+        <div class="col-md-4 text-end">
+            <a asp-action="CreateEvent" class="btn btn-primary fw-bold">+ Create New Event</a>
+        </div>
+    </div>
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            @TempData["SuccessMessage"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+
+    <div class="card shadow-sm">
+        <div class="card-body">
+            @if (Model == null || !Model.Any())
+            {
+                <p class="text-muted">No events available to manage.</p>
+            }
+            else
+            {
+                <div class="table-responsive">
+                    <table class="table table-striped align-middle">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Title</th>
+                                <th>Date</th>
+                                <th>Location</th>
+                                <th>Type</th>
+                                <th>Fee</th>
+                                <th class="text-center">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td class="fw-bold">@item.Name</td>
+                                    <td>@item.Date.ToString("yyyy-MM-dd HH:mm")</td>
+                                    <td>@item.Location</td>
+                                    <td><span class="badge bg-secondary">@item.EventType</span></td>
+                                    <td>R @item.EntryFee.ToString("N2")</td>
+                                    <td class="text-center">
+                                        <a asp-action="Results" asp-route-eventId="@item.EventId" class="btn btn-sm btn-outline-primary me-1">Results</a>
+                                        <a asp-action="Dashboard" class="btn btn-sm btn-outline-secondary">View</a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            }
+        </div>
+    </div>
+</div>

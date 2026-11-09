@@ -1,0 +1,50 @@
+﻿@model RaceDayManagement.Web.Models.EventViewModel
+
+@{
+    ViewData["Title"] = "Event Details";
+}
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-sm">
+                @if (!string.IsNullOrEmpty(Model.ImageUrl))
+                {
+                    <img src="@Model.ImageUrl" class="card-img-top" alt="Event Banner" style="max-height: 350px; object-fit: cover;" />
+                }
+                <div class="card-body">
+                    <h2 class="card-title fw-bold text-primary">@Model.Name</h2>
+                    <p class="text-muted">@Model.Date.ToString("yyyy-MM-dd HH:mm") at <strong>@Model.Location</strong></p>
+
+                    <div class="mb-3">
+                        <span class="badge bg-info text-dark me-2">Type: @Model.EventType</span>
+                        <span class="badge bg-secondary me-2">Distance: @Model.Distance</span>
+                        <span class="badge bg-success">Fee: R @Model.EntryFee.ToString("N2")</span>
+                    </div>
+
+                    <hr />
+
+                    <h5>About this Event</h5>
+                    <p class="card-text mb-4">@Model.Description</p>
+
+                    <div class="card bg-light p-3 mb-4">
+                        <h5 class="fw-bold">Enrol for this Event</h5>
+                        <form asp-action="Enroll" method="post" class="mt-2">
+                            <input type="hidden" name="eventId" value="@Model.EventId" />
+                            <div class="mb-3">
+                                <label for="category" class="form-label fw-bold">Select Category / Division</label>
+                                <input type="text" name="category" class="form-control" placeholder="e.g. Open, Veteran, Junior" required />
+                            </div>
+                            <button type="submit" class="btn btn-success fw-bold px-4">Confirm Enrolment</button>
+                        </form>
+                    </div>
+
+
+                    <div class="text-end">
+                        <a asp-action="Index" class="btn btn-outline-secondary">← Back to Events</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

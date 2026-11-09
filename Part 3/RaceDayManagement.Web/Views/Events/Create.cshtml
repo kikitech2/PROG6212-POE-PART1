@@ -1,0 +1,64 @@
+﻿@model RaceDayManagement.Web.Models.CreateEventViewModel
+
+@{
+    ViewData["Title"] = "Create New Event";
+}
+
+<div class="container my-4" style="max-width: 700px;">
+    <div class="card shadow-sm border-0 p-4" style="background-color: var(--raceday-card-bg, #ffffff);">
+        <h2 class="mb-4 fw-bold" style="color: var(--raceday-fuschia);">Create New Race Event</h2>
+
+        <form asp-action="Create" enctype="multipart/form-data" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+            <div class="mb-3">
+                <label asp-for="Title" class="form-label fw-semibold"></label>
+                <input asp-for="Title" class="form-control" placeholder="e.g. Cape Peninsula 10K" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Description" class="form-label fw-semibold"></label>
+                <textarea asp-for="Description" class="form-control" rows="3" placeholder="Enter event details..."></textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label asp-for="EventDate" class="form-label fw-semibold"></label>
+                    <input asp-for="EventDate" class="form-control" type="datetime-local" />
+                    <span asp-validation-for="EventDate" class="text-danger"></span>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label asp-for="EntryFee" class="form-label fw-semibold"></label>
+                    <input asp-for="EntryFee" class="form-control" type="number" step="0.01" placeholder="0.00" />
+                    <span asp-validation-for="EntryFee" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Location" class="form-label fw-semibold"></label>
+                <input asp-for="Location" class="form-control" placeholder="e.g. Cape Town" />
+                <span asp-validation-for="Location" class="text-danger"></span>
+            </div>
+
+            <div class="mb-4">
+                <label asp-for="ImageFile" class="form-label fw-semibold">Event Image</label>
+                <input asp-for="ImageFile" class="form-control" type="file" accept="image/*" />
+                <span asp-validation-for="ImageFile" class="text-danger"></span>
+                <div class="form-text">Upload an image file to store in Azure Blob Storage.</div>
+            </div>
+
+            <div class="d-flex justify-content-between">
+                <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+                <button type="submit" class="btn btn-raceday-primary px-4">Create Event</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

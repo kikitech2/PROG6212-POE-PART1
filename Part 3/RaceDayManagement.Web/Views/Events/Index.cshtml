@@ -1,0 +1,69 @@
+﻿@model IEnumerable<RaceDayManagement.Web.Models.EventViewModel>
+
+@{
+    ViewData["Title"] = "Upcoming Races";
+}
+
+<div class="container my-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 style="color: var(--raceday-fuschia);">Upcoming Race Events</h1>
+        <a asp-action="Create" class="btn btn-raceday-primary">
+            <i class="bi bi-plus-circle"></i> + Create New Event
+        </a>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        @if (Model != null && Model.Any())
+        {
+            @foreach (var item in Model)
+            {
+                <div class="col">
+                    <div class="card h-100 shadow-sm border-0">
+                        @{
+                            // Automatically point to your local image for the Cape Peninsula event, or use item.ImageUrl if available
+                            string imageSrc = "";
+                            if (!string.IsNullOrEmpty(item.Name) && item.Name.Contains("Cape Peninsula"))
+                            {
+                                imageSrc = Url.Content("~/images/cape-peninsula.webp");
+                            }
+                            else if (!string.IsNullOrEmpty(item.ImageUrl))
+                            {
+                                imageSrc = item.ImageUrl;
+                            }
+                        }
+
+                        @if (!string.IsNullOrEmpty(imageSrc))
+                        {
+                            <img src="@imageSrc" class="card-img-top" alt="@item.Name" style="height: 200px; object-fit: cover;">
+                        }
+                        else
+                        {
+                            <div class="card-img-top bg-secondary text-white d-flex align-items-center justify-content-center" style="height: 200px;">
+                                <span>No Image Available</span>
+                            </div>
+                        }
+
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold" style="color: var(--raceday-vervain);">@item.Name</h5>
+                            <p class="card-text text-muted small"><i class="bi bi-calendar-event"></i> @item.Date.ToString("yyyy-MM-dd HH:mm")</p>
+                            <p class="card-text text-muted small"><i class="bi bi-geo-alt"></i> @item.Location</p>
+                            <p class="card-text flex-grow-1">@item.Description</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <span class="fw-bold" style="color: var(--raceday-palm);">R @item.EntryFee.ToString("N2")</span>
+                                <a href="#" class="btn btn-raceday-primary btn-sm">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+        else
+        {
+            <div class="col-12">
+                <div class="alert alert-info text-center" role="alert">
+                    No race events found or unable to connect to the backend API. Make sure your API is running!
+                </div>
+            </div>
+        }
+    </div>
+</div>

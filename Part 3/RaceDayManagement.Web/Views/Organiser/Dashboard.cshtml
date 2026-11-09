@@ -1,0 +1,79 @@
+﻿@model IEnumerable<RaceDayManagement.Web.Models.EventViewModel>
+
+@{
+    ViewData["Title"] = "Organiser Dashboard";
+}
+
+<div class="container mt-4">
+    <div class="row mb-4">
+        <div class="col-md-8">
+            <h2>Organiser Dashboard</h2>
+            <p class="text-muted">Welcome back! Manage your race events, track enrolments, and record participant results.</p>
+        </div>
+        <div class="col-md-4 text-end">
+            <a asp-action="CreateEvent" class="btn btn-primary fw-bold">+ Create New Event</a>
+        </div>
+    </div>
+
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            @TempData["SuccessMessage"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card shadow-sm">
+                <div class="card-header bg-dark text-white fw-bold">
+                    Active Race Events
+                </div>
+                <div class="card-body">
+                    @if (Model == null || !Model.Any())
+                    {
+                        <p class="text-muted">No events found. Click "Create New Event" to get started.</p>
+                    }
+                    else
+                    {
+                        <div class="table-responsive">
+                            <table class="table table-hover align-middle">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>Image</th>
+                                        <th>Title</th>
+                                        <th>Date</th>
+                                        <th>Location</th>
+                                        <th>Distance</th>
+                                        <th>Type</th>
+                                        <th>Entry Fee</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td>
+                                                <img src="@item.DisplayImageUrl" alt="@item.Name" style="width: 50px; height: 50px; object-fit: cover; border-radius: 4px;" />
+                                            </td>
+                                            <td class="fw-bold">@item.Name</td>
+                                            <td>@item.Date.ToString("yyyy-MM-dd HH:mm")</td>
+                                            <td>@item.Location</td>
+                                            <td>@item.Distance</td>
+                                            <td><span class="badge bg-info text-dark">@item.EventType</span></td>
+                                            <td>R @item.EntryFee.ToString("N2")</td>
+                                            <td>
+                                                <a asp-action="Results" asp-route-eventId="@item.EventId" class="btn btn-sm btn-outline-primary">Results Entry</a>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

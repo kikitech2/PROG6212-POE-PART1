@@ -1,0 +1,105 @@
+﻿@using Microsoft.AspNetCore.Http
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - RaceDay Management</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/RaceDayManagement.Web.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark navbar-raceday border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold" asp-area="" asp-controller="Home" asp-action="Index">RaceDay Management</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        @{
+                            var userRole = Context.Session.GetString("UserRole");
+                            var userEmail = Context.Session.GetString("UserEmail");
+                        }
+
+                        @if (string.IsNullOrEmpty(userEmail))
+                        {
+                            <!-- Public / Unauthenticated Navigation Links -->
+                            <li class="nav-item">
+                                <a class="nav-link text-white" asp-controller="Account" asp-action="Login">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" asp-controller="Account" asp-action="Register">Register</a>
+                            </li>
+                        }
+                        else if (userRole == "Organiser")
+                        {
+                            <!-- Organiser Specific Navigation Links -->
+                            <li class="nav-item">
+                                <a class="nav-link text-white" asp-controller="Organiser" asp-action="Dashboard">Dashboard</a>
+                            </li>
+                            <li class="nav-item">
+                                <!-- Fixed: Points to CreateEvent action method -->
+                                <a class="nav-link text-white" asp-controller="Organiser" asp-action="CreateEvent">Manage Events</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" asp-controller="Organiser" asp-action="Results">Results Entry</a>
+                            </li>
+                        }
+                        else
+                        {
+                            <!-- Participant Specific Navigation Links -->
+                            <li class="nav-item">
+                                <a class="nav-link text-white" asp-controller="Participant" asp-action="Index">Browse Events</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" asp-controller="Participant" asp-action="MyEnrolments">My Enrolments</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" asp-controller="Participant" asp-action="MyResults">My Results</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" asp-controller="Participant" asp-action="Profile">Profile</a>
+                            </li>
+                        }
+                    </ul>
+
+                    <!-- User Information & Logout Button -->
+                    <ul class="navbar-nav">
+                        @if (!string.IsNullOrEmpty(userEmail))
+                        {
+                            <li class="nav-item">
+                                <span class="nav-link text-light me-2">Hello, @userEmail (@userRole)</span>
+                            </li>
+                            <li class="nav-item">
+                                <a class="btn btn-outline-light btn-sm mt-1" asp-controller="Account" asp-action="Logout">Logout</a>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2026 - RaceDay Management - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

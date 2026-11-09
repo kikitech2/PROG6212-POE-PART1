@@ -1,0 +1,83 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+/* --- Custom RaceDay Sport Palette & Branding --- */
+:root {
+    --raceday-papaya: #BD6809; /* Energetic warm accent / pending badges */
+    --raceday-paradise: #9A5F4A; /* Rose-terracotta hover states */
+    --raceday-fuschia: #3D1419; /* Deep wine / primary brand navbar */
+    --raceday-palm: #2F4731; /* Rich forest green / confirmed badges */
+    --raceday-vervain: #121B13; /* Deep charcoal green body text */
+}
+
+body {
+    /* Reduced white overlay (from 88% down to 35%) so the artwork is rich and clear */
+    background-image: linear-gradient(rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.35)), url('https://i.pinimg.com/1200x/80/3d/81/803d81164f857978d29e4b1229a29624.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: var(--raceday-vervain);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar-raceday {
+    background-color: var(--raceday-fuschia) !important;
+}
+
+.btn-raceday-primary {
+    background-color: var(--raceday-papaya);
+    color: #ffffff;
+    border: none;
+}
+
+    .btn-raceday-primary:hover {
+        background-color: var(--raceday-paradise);
+        color: #ffffff;
+    }
+
+/* Status Badges */
+.badge-confirmed {
+    background-color: var(--raceday-palm);
+    color: #ffffff;
+}
+
+.badge-pending {
+    background-color: var(--raceday-papaya);
+    color: #ffffff;
+}
+
+/* Solid card background with subtle shadow so content stays readable over the wallpaper */
+.card {
+    background-color: #ffffff;
+    border: 1px solid rgba(154, 95, 74, 0.25) !important;
+    box-shadow: 0 4px 12px rgba(61, 20, 25, 0.1);
+}
+
+footer {
+    margin-top: auto;
+    background-color: rgba(255, 255, 255, 0.9);
+}
