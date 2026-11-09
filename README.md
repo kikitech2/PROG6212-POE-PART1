@@ -187,7 +187,8 @@ To containerize and run the application locally using Docker:
 # YouTube Link
 - Part 1: https://youtu.be/cNDCuXv7iDU
 - Part 2: https://youtu.be/-AbNhpH1okY
-- Part 3:
+- Part 3: https://youtu.be/aer-9SSiaZk
+  
 
 # References
 Troelsen, A. and Japikse, P. (2021). Pro C# 9 with .NET 5: Foundational Principles and Practices in Programming. 10th edn. New York: Apress.
