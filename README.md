@@ -178,6 +178,7 @@ To containerize and run the application locally using Docker:
 <img width="1178" height="138" alt="image" src="https://github.com/user-attachments/assets/45348f23-9caf-4f0c-9028-e7ca824970da" />
 
 # PART 3
+<img width="1432" height="362" alt="image" src="https://github.com/user-attachments/assets/0edcdf47-757b-42bb-87f7-f67e02a284a0" />
 
 # YouTube Link
 - Part 1: https://youtu.be/cNDCuXv7iDU
