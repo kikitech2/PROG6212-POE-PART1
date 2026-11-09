@@ -166,7 +166,11 @@ To containerize and run the application locally using Docker:
 
 # Access the Application
 - Web Frontend
+  <img width="1881" height="958" alt="image" src="https://github.com/user-attachments/assets/91abfe30-f188-4f4a-8426-efb6a6bf7846" />
+
 - API Swagger UI
+  <img width="1898" height="962" alt="image" src="https://github.com/user-attachments/assets/7d544348-a6fe-45bf-9a37-93fa1dbef134" />
+
 
   
 # GitHub Actions CI/CD Workflow & Continuous Integration Setup
